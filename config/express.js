@@ -6,6 +6,9 @@ module.exports = function(){
 	//Instância do Express
 	let app = express();
 
+	//Porta da aplicação	
+	app.set('port', process.env.PORT);
+
 	//Middleware
 	app.use(express.static('./public'));
 	app.use(bodyParser.urlencoded({extended: true}));
